@@ -10,9 +10,9 @@ const createTokenAndSaveCookies = async(userId,res) =>{
         expiresIn: "7d"
     })
     res.cookie("jwt", token, {
-        httpOnly: true,  //xss
+        httpOnly: false,  //xss
         secure: true,
-        sameSite: "lax",  // csrf
+        sameSite: "none",  // csrf
         path: "/", // Ensure the cookie is available throughout the site
 
     })
