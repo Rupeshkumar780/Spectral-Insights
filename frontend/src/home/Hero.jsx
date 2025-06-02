@@ -35,7 +35,6 @@ const Hero = () => {
                     <p className="text-lg font-semibold text-gray-800">
                       {element.adminName}
                     </p>
-                    <p className="text-xs text-gray-400">New</p>
                   </div>
                 </div>
               </Link>
