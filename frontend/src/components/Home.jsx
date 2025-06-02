@@ -1,0 +1,19 @@
+import Hero from "../home/Hero"
+import Trending from "../home/Trending"
+import Devotional from "../home/Devotional"
+import Creator from "../home/Creator"
+
+const Home = () => {
+  return(
+    <>
+    <div>
+      <Hero/>
+      <Trending/>
+      <Devotional/>
+      <Creator/>
+    </div>
+    </>
+  )
+}
+
+export default Home

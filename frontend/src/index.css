@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+span{
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* for dashboard sidebar */
+@media (min-width: 640px) and (max-width: 770px) {
+  .sidebar-narrow {
+    margin-left: 60px !important;
+  }
+}
+
+/* hover underline for footer */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+}
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1e3a8a; /* indigo-800 */
+    transition: width 0.3s ease-in-out;
+}
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* hover underline for Navbar */
+.navbar-underline {
+  position: relative;
+  display: inline-block;
+}
+.navbar-underline::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2.35px;
+  bottom: 0;
+  left: 0;
+  background-color: #0861af;
+  animation: none;
+}
+.navbar-underline:hover::after {
+  animation: underlineLoop 1.2s ease-in-out infinite;
+}
+@keyframes underlineLoop {
+  0% {
+    width: 0%;
+    left: 0%;
+  }
+  50% {
+    width: 100%;
+    left: 0%; 
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
