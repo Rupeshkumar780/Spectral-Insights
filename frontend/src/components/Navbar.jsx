@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { useAuth } from "../context/AuthProvider";
 import axios from "axios";
+import { BACKEND_URL } from "../utils";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        "http://localhost:4001/api/users/logout",
+        `${BACKEND_URL}/api/users/logout`,
         { withCredentials: true }
       );
       localStorage.removeItem("jwt");
