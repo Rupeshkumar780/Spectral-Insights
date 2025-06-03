@@ -26,7 +26,7 @@ const Devotional = () => {
                   alt={blog?.title}
                   className="w-full h-48 object-cover"
                 />
-                <div className="absolute inset-0 bg-black opacity-30"></div>
+                <div className="absolute inset-0 bg-black opacity-30 hover:opacity-15"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h2 className="text-lg font-semibold">{blog?.title}</h2>
                   <p className="text-sm">{blog?.category}</p>
