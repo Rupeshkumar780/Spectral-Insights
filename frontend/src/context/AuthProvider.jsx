@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   const fetchBlogs = async () => {
     try {
       const { data } = await axios.get(
-        `${BACKEND_URL}/all-blogs`,
+        `${BACKEND_URL}/api/blogs/all-blogs`,
         { withCredentials: true }
       );
       console.log("All-Blogs", data);
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
       console.log("token", token);
       if (token) {
         const { data } = await axios.get(
-          `${BACKEND_URL}/my-profile`,
+          `${BACKEND_URL}/api/users/my-profile`,
           {
             withCredentials: true,
             headers: {
