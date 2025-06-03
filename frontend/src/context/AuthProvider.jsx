@@ -12,9 +12,10 @@ export const AuthProvider = ({ children }) => {
   const fetchBlogs = async () => {
     try {
       const { data } = await axios.get(
-        `${BACKEND_URL}/api/blogs/all-blogs`,
+        `${BACKEND_URL}/all-blogs`,
         { withCredentials: true }
       );
+      console.log("All-Blogs", data);
       setBlogs(data);
     } catch (error) {
       console.log(error);
@@ -25,9 +26,11 @@ export const AuthProvider = ({ children }) => {
     try {
       // token should be let type variable because its value will change in every login. (in backend also)
       const token = localStorage.getItem("jwt");
+      console.log("Fetch profile");
+      console.log("token", token);
       if (token) {
         const { data } = await axios.get(
-          `${BACKEND_URL}/api/users/my-profile`,
+          `${BACKEND_URL}/my-profile`,
           {
             withCredentials: true,
             headers: {
