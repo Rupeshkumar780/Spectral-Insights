@@ -10,8 +10,8 @@ const Devotional = () => {
       <div className="container mx-auto my-12 p-4">
         <h1 className="text-2xl font-bold mb-6">Devotional</h1>
         <p className="text-center mb-8">
-          The concept of gods varies widely across different cultures,
-          religions, and belief systems
+          Explore spiritual journeys, practices, and the profound connection to
+          a higher purpose.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
           {devotionalBlogs && devotionalBlogs.length > 0 ? (
@@ -22,7 +22,7 @@ const Devotional = () => {
                 className="relative rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300"
               >
                 <img
-                  src={blog?.blogImage?.url}   // ?. -> optional Chaining, avoid website from crash when unable to fetch data from backend
+                  src={blog?.blogImage?.url} // ?. -> optional Chaining, avoid website from crash when unable to fetch data from backend
                   alt={blog?.title}
                   className="w-full h-48 object-cover"
                 />
@@ -42,6 +42,6 @@ const Devotional = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Devotional;
