@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 
 const Technology = () => {
   const { blogs } = useAuth();
-  const TechnologyBlogs = blogs?.filter((blog) => blog.category === "Technology");
+  const TechnologyBlogs = blogs?.filter(
+    (blog) => blog.category === "Technology"
+  );
   console.log(TechnologyBlogs);
   return (
     <div>
       <div className="container mx-auto my-12 p-4">
         <h1 className="text-2xl font-bold mb-6">Technology</h1>
         <p className="text-center mb-8">
-          The concept of gods varies widely across different cultures,
-          religions, and belief systems
+          Dive into the exciting world of gadgets, software, and digital
+          innovations shaping our future.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
           {TechnologyBlogs && TechnologyBlogs.length > 0 ? (
@@ -22,7 +24,7 @@ const Technology = () => {
                 className="relative rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300"
               >
                 <img
-                  src={blog?.blogImage?.url}   // ?. -> optional Chaining, avoid website from crash when unable to fetch data from backend
+                  src={blog?.blogImage?.url} // ?. -> optional Chaining, avoid website from crash when unable to fetch data from backend
                   alt={blog?.title}
                   className="w-full h-48 object-cover"
                 />
@@ -42,6 +44,6 @@ const Technology = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Technology;
