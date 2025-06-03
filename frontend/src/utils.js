@@ -1,5 +1,4 @@
-export const BACKEND_URL = "https://spectral-insights.onrender.com";
-
-  // import.meta.env.MODE === "development"
-  //   ? 
-  //   : "http://localhost:4001";
+export const BACKEND_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:4001"
+    : "https://spectral-insights.onrender.com";
