@@ -45,7 +45,8 @@ app.use("/api/blogs", blogRoute);
 cloudinary.config({ 
     cloud_name: process.env.CLOUD_NAME, 
     api_key: process.env.CLOUD_API_KEY, 
-    api_secret: process.env.API_SECRET_KEY 
+    api_secret: process.env.API_SECRET_KEY ,
+    secure: true  // This forces HTTPS for all URLs
 });
 
 app.listen(port, () => {
