@@ -109,19 +109,6 @@ export const myBlogs = async (req, res) => {
 };
 
 // function to Update the Blogs of the user in Database
-// export const updateBlog = async (req, res) => {
-//   const { id } = req.params;
-//   if (!mongoose.Types.ObjectId.isValid(id)) {
-//     return res.status(400).json({ message: "Invalid Blog id" });
-//   }
-
-//   const updatedBlog = await Blog.findByIdAndUpdate(id, req.body, { new: true });
-//   if (!updatedBlog) {
-//     return res.status(404).json({ message: "Blog not Found" });
-//   }
-//   res.status(200).json(updatedBlog);
-// };
-
 export const updateBlog = async (req, res) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -183,3 +170,17 @@ export const updateBlog = async (req, res) => {
     blog: updatedBlog,
   });
 };
+
+
+// export const updateBlog = async (req, res) => {
+//   const { id } = req.params;
+//   if (!mongoose.Types.ObjectId.isValid(id)) {
+//     return res.status(400).json({ message: "Invalid Blog id" });
+//   }
+
+//   const updatedBlog = await Blog.findByIdAndUpdate(id, req.body, { new: true });
+//   if (!updatedBlog) {
+//     return res.status(404).json({ message: "Blog not Found" });
+//   }
+//   res.status(200).json(updatedBlog);
+// };
