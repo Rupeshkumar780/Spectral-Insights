@@ -31,7 +31,7 @@ const Trending = () => {
       <h1 className=" text-2xl font-semibold mb-4">Trending</h1>
       <Carousel responsive={responsive}>
         {blogs && blogs.length > 0 ? (
-          blogs.slice(0, 7).map((element) => {
+          blogs.slice(0, 8).map((element) => {
             return (
               <div
                 key={element._id}

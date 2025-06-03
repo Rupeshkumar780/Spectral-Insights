@@ -1,24 +1,28 @@
 import { useAuth } from "../context/AuthProvider";
 import { Link } from "react-router-dom";
 
-const Blogs=() => {
+const Technology = () => {
   const { blogs } = useAuth();
-
-  console.log(blogs);
+  const TechnologyBlogs = blogs?.filter((blog) => blog.category === "Technology");
+  console.log(TechnologyBlogs);
   return (
     <div>
       <div className="container mx-auto my-12 p-4">
-        <h1 className="text-2xl font-bold mb-6">All Blogs goes here!!!</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {blogs && blogs.length > 0 ? (
-            blogs.map((blog, index) => (
+        <h1 className="text-2xl font-bold mb-6">Technology</h1>
+        <p className="text-center mb-8">
+          The concept of gods varies widely across different cultures,
+          religions, and belief systems
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+          {TechnologyBlogs && TechnologyBlogs.length > 0 ? (
+            TechnologyBlogs.map((blog, index) => (
               <Link
                 to={`/blog/${blog._id}`}
                 key={index}
                 className="relative rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300"
               >
                 <img
-                  src={blog?.blogImage?.url}
+                  src={blog?.blogImage?.url}   // ?. -> optional Chaining, avoid website from crash when unable to fetch data from backend
                   alt={blog?.title}
                   className="w-full h-48 object-cover"
                 />
@@ -30,7 +34,9 @@ const Blogs=() => {
               </Link>
             ))
           ) : (
-            <div></div>
+            <div className=" flex h-screen w-screen items-center justify-center">
+              Loading....
+            </div>
           )}
         </div>
       </div>
@@ -38,4 +44,4 @@ const Blogs=() => {
   );
 }
 
-export default Blogs;
+export default Technology;
