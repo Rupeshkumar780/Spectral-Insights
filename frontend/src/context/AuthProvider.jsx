@@ -1,5 +1,10 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useState } => {
+import { createContext, useContext, useEffect, useState } from "react"; // Corrected this line
+import { BACKEND_URL } from "../utils";
+
+export const AuthContext = createContext();
+
+export const AuthProvider = ({ children }) => {
   const [blogs, setBlogs] = useState();
   const [profile, setProfile] = useState();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -97,6 +102,7 @@ import { createContext, useContext, useEffect, useState } => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+
 
 
 
