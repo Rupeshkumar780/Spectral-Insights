@@ -10,7 +10,7 @@ const createTokenAndSaveCookies = async(userId,res) =>{
         expiresIn: "7d"
     })
     res.cookie("jwt", token, {
-        httpOnly: true,                                   //  prevents JS access to cookie (protects from XSS)
+        httpOnly: false,                                   //  prevents JS access to cookie (protects from XSS)
         secure: process.env.NODE_ENV === "production",    //  required for cross-site cookies on HTTPS
         sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",        //  allows cross-site (frontend <> backend)
         path: "/",                                       //  valid for all routes
