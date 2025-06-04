@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoMdImages } from "react-icons/io";
 import { useAuth } from "../context/AuthProvider";
 import { BACKEND_URL } from "../utils";
+import AI_IMAGE from "../assets/AI.png";
 
 const CreateBlog = () => {
   const [title, setTitle] = useState("");
@@ -127,9 +128,24 @@ const CreateBlog = () => {
               />
             </div>
 
+            {/* AI Suggestion Button */}
+            <div className="relative group w-full">
+              <Link
+                to={'/ai-generate'}
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-md shadow-lg hover:scale-102 transition-all duration-300"
+              >
+                <img src={AI_IMAGE} alt="Gemini AI" className="w-6 h-6 rounded-full" />
+                <span>Get AI Writing Suggestions</span>
+              </Link>
+              {/* Tooltip */}
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 px-3 py-1 bg-gray-800 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                Kickstart writing with AI Assistance
+              </div>
+            </div>
+
             <button
               type="submit"
-              className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-200"
+              className="w-full py-3 px-4 font-semibold bg-gradient-to-r from-blue-400 to-cyan-700 text-white rounded-md hover:scale-102 transition-all duration-300"
             >
               Post Blog
             </button>
