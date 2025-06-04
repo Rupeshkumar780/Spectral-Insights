@@ -12,6 +12,7 @@ import Login from "../src/pages/Login";
 import Register from "../src/pages/Register";
 import Dashboard from "../src/pages/Dashboard";
 import BlogMission from "../src/pages/BlogMission";
+import AIGenerator from './components/AIGenerator';
 import Detail from "./pages/Details";
 import UpdateBlog from "../src/dashboard/UpdateBlog";
 import TermsOfService from './Legal/TermsOfService';
@@ -46,6 +47,7 @@ function App() {
         <Route exact path="/login" element={ <Login/> } />
         <Route exact path="/register" element={ <Register/> } />
         <Route exact path="/dashboard" element={ <Dashboard/> } />
+        <Route path="/ai-generate" element={<AIGenerator />} />
 
          {/* Single page route */}
         <Route exact path="/blog/:id" element={<Detail />} />

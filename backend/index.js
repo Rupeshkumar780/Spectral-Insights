@@ -1,5 +1,5 @@
 import express from 'express';
-import dotenv from "dotenv";
+
 import mongoose from 'mongoose';
 import fileUpload from 'express-fileupload';
 import cookieParser from 'cookie-parser';
@@ -7,12 +7,14 @@ import { v2 as cloudinary } from 'cloudinary';
 
 import userRoute from "./routes/user.routes.js";
 import blogRoute from "./routes/blog.route.js";
+import aiRoutes from "./routes/aiRoutes.js"
 import cors from "cors"
-const app = express()
-dotenv.config()
+import dotenv from "dotenv";
+dotenv.config();
+const app = express();
 
 const port = process.env.PORT;
-const MONGO_URL = process.env.MONGO_URI
+const MONGO_URL = process.env.MONGO_URI;
  
 //middleware
 app.use(express.json());
@@ -40,6 +42,7 @@ try{
 // defining routes
 app.use("/api/users", userRoute);
 app.use("/api/blogs", blogRoute);
+app.use("/api/ai", aiRoutes);
 
 // Cloudinary
 cloudinary.config({ 
