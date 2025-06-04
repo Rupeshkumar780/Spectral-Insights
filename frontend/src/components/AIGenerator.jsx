@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { BACKEND_URL } from "../utils";
+import AI_IMAGE from "../assets/AI.png";
 
 function AIGenerator() {
   const [prompt, setPrompt] = useState("");
@@ -37,8 +38,13 @@ function AIGenerator() {
   };
 
   return (
-    <div className="container mx-auto p-4 max-w-2xl">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+    <div className="container min-h-screen flex flex-col justify-center mx-auto p-4 max-w-2xl">
+      <h2 className="text-3xl flex justify-center font-bold text-gray-800 mb-6 text-center">
+        <img
+          src={AI_IMAGE}
+          alt="Gemini"
+          className="w-8 h-8 rounded-full mr-3 mt-1"
+        />
         AI Text Generator
       </h2>
 
@@ -53,7 +59,7 @@ function AIGenerator() {
           id="promptInput"
           className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
           rows="6"
-          placeholder="e.g., Write a short blog post about the benefits of meditation."
+          placeholder="e.g., Write a short blog post about the benefits of Yoga."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
         ></textarea>
@@ -61,7 +67,7 @@ function AIGenerator() {
         <button
           onClick={handleGenerateText}
           disabled={loading}
-          className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out "
         >
           {loading ? "Generating..." : "Generate Text"}
         </button>
