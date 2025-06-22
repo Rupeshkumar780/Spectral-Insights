@@ -80,11 +80,10 @@ const CreateBlog = () => {
                 <option value="Sports">Sports</option>
                 <option value="Coding">Coding</option>
                 <option value="Entertainment">Entertainment</option>
-                <option value="Business">Business</option>
-                <option value=" Politics">Politics </option>
+
                 <option value="History">History</option>
                 <option value="Lifestyle">Lifestyle </option>
-                {/* <option value="Books & Reviews">Books & Reviews </option> */}
+                <option value="Books & Reviews">Books & Reviews </option>
                 <option value="Self-Improvement">Self-Improvement </option>
                 <option value="Philosophy & Thought">Philosophy & Thought </option>
                 <option value="Productivity Hacks">Productivity Hacks </option>
