@@ -59,7 +59,7 @@ function AIGenerator() {
           id="promptInput"
           className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
           rows="6"
-          placeholder="e.g., Write a short blog post about the benefits of Yoga."
+          placeholder="e.g., Write a short blog post under Lifestyle & Wellness on 'The Art of Staying Consistent in a Distracted World.'"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
         ></textarea>
