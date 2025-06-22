@@ -13,7 +13,7 @@ const CreateBlog = () => {
   const [about, setAbout] = useState("");
   const [blogImage, setBlogImage] = useState("");
   const [blogImagePreview, setBlogImagePreview] = useState("");
-  const { fetchBlogs } = useAuth(); 
+  const { fetchBlogs } = useAuth();
   const navigateTo = useNavigate();
 
   const changePhotoHandler = (e) => {
@@ -54,7 +54,7 @@ const CreateBlog = () => {
       setBlogImage("");
       setBlogImagePreview("");
 
-      await fetchBlogs();  // refresh blogs from API
+      await fetchBlogs(); // refresh blogs from API
       navigateTo("/");
     } catch (error) {
       console.log(error);
@@ -81,8 +81,13 @@ const CreateBlog = () => {
                 <option value="Coding">Coding</option>
                 <option value="Entertainment">Entertainment</option>
                 <option value="Business">Business</option>
+                <option value=" Politics">Politics </option>
                 <option value="History">History</option>
-                <option value="Lifestyle ">Lifestyle </option>
+                <option value="Lifestyle">Lifestyle </option>
+                <option value="Books & Reviews">Books & Reviews </option>
+                <option value="Self-Improvement">Self-Improvement </option>
+                <option value="Philosophy & Thought">Philosophy & Thought </option>
+                <option value="Productivity Hacks">Productivity Hacks </option>
               </select>
             </div>
 
@@ -102,7 +107,7 @@ const CreateBlog = () => {
               <div className="flex items-center justify-center">
                 {blogImagePreview ? (
                   <img
-                    src={blogImagePreview} 
+                    src={blogImagePreview}
                     alt="Preview"
                     className="w-full h-auto rounded-md object-cover"
                   />
@@ -131,10 +136,14 @@ const CreateBlog = () => {
             {/* AI Suggestion Button */}
             <div className="relative group w-full">
               <Link
-                to={'/ai-generate'}
+                to={"/ai-generate"}
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-md shadow-lg hover:scale-102 transition-all duration-300"
               >
-                <img src={AI_IMAGE} alt="Gemini AI" className="w-6 h-6 rounded-full" />
+                <img
+                  src={AI_IMAGE}
+                  alt="Gemini AI"
+                  className="w-6 h-6 rounded-full"
+                />
                 <span>Get AI Writing Suggestions</span>
               </Link>
               {/* Tooltip */}
@@ -154,6 +163,6 @@ const CreateBlog = () => {
       </div>
     </div>
   );
-}
+};
 
 export default CreateBlog;
