@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   const fetchProfile = async () => {
     try {
       // token should be let type variable because its value will change in every login. (in backend also)
-      const token = localStorage.getItem("jwt");
+      let token = localStorage.getItem("jwt");
       console.log("Fetch profile");
       console.log("token", token);
       if (token) {
