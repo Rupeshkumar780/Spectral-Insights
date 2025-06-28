@@ -57,7 +57,7 @@ const Trending = () => {
   }
 
   return (
-    <div className="container mx-aut overflow-hidden">
+    <div className="container mx-auto overflow-hidden">
       <h1 className="text-2xl font-semibold mb-4">Trending</h1>
       <div
         ref={sliderRef}
