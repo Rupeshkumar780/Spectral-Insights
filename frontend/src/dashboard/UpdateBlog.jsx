@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
-import { BACKEND_URL } from "../utils";
 import AI_IMAGE from "../assets/AI.png";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const UpdateBlog = () => {
   const navigateTo = useNavigate();

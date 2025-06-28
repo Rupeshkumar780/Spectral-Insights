@@ -4,8 +4,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { useAuth } from "../context/AuthProvider";
 import axios from "axios";
-import { BACKEND_URL } from "../utils";
 import toast from "react-hot-toast";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Navbar = () => {
   const [show, setShow] = useState(false);

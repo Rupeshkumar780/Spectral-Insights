@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import { BACKEND_URL } from "../utils";
 import AI_IMAGE from "../assets/AI.png";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 function AIGenerator() {
   const [prompt, setPrompt] = useState("");

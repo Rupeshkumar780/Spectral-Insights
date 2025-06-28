@@ -5,7 +5,7 @@ import axios from "axios";
 import { CiMenuBurger } from "react-icons/ci";
 import { BiSolidLeftArrowAlt } from "react-icons/bi";
 import toast from "react-hot-toast";
-import { BACKEND_URL } from "../utils";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Sidebar = ({ setComponent }) => {
   const { profile, setIsAuthenticated } = useAuth();
