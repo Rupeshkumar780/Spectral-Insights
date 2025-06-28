@@ -4,8 +4,8 @@ import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdImages } from "react-icons/io";
 import { useAuth } from "../context/AuthProvider";
-import { BACKEND_URL } from "../utils";
 import AI_IMAGE from "../assets/AI.png";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const CreateBlog = () => {
   const [title, setTitle] = useState("");

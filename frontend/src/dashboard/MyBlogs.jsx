@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
-import { BACKEND_URL } from "../utils";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const MyBlogs = () => {
   const [myBlogs, setMyBlogs] = useState([]);
