@@ -37,7 +37,7 @@ const Creator = () => {
               <img
                 src={element.photo?.url}
                 alt={element.name}
-                className="w-40 h-40 object-cover border border-gray-300 rounded-full mb-4 shadow-2xl hover:shadow-slate-600"
+                className="w-40 h-40 object-cover border border-gray-300 rounded-full mb-4 shadow-lg shadow-cyan-300 hover:shadow-2xl hover:shadow-cyan-500"
               />
               <div className="text-center">
                 <p className="text-lg font-medium">{element.name}</p>
