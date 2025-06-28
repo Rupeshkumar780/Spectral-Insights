@@ -32,8 +32,17 @@ const Login = () => {
       toast.success(data.message || "User Logged in Successfully", {
         duration: 3000,
       });
-      setProfile(data);
+      // Fetch full profile after login
+      const profileRes = await axios.get(`${BACKEND_URL}/api/users/my-profile`, {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      setProfile(profileRes.data); // full profile including photo
       setIsAuthenticated(true);
+      // clear form
       setEmail("");
       setPassword("");
       setRole("");
