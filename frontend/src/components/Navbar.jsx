@@ -22,7 +22,7 @@ const Navbar = () => {
       localStorage.removeItem("jwt");
       toast.success(data.message);
       setIsAuthenticated(false);
-      navigateTo("/login");
+      navigateTo("/");
     } catch (error) {
       toast.error("Failed to logout");
     }

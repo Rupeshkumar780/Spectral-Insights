@@ -9,7 +9,7 @@ import { Navigate } from "react-router-dom";
 const Dashboard = () => {
   const { profile, isAuthenticated } = useAuth();
   const [component, setComponent] = useState("My Blogs");
-  console.log(profile);
+  console.log("profile" , profile);
   console.log(isAuthenticated);
 
   if (!isAuthenticated) {
