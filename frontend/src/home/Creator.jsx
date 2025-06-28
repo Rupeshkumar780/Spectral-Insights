@@ -33,11 +33,11 @@ const Creator = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {admin && admin.length > 0 ? (
           admin.slice(0, 4).map((element) => (
-            <div key={element._id} className="flex flex-col items-center">
+            <div key={element._id} className="flex flex-col items-center hover:scale-95 transition-transform duration-300">
               <img
                 src={element.photo?.url}
                 alt={element.name}
-                className="w-40 h-40 object-cover border border-gray-300 rounded-full mb-4 shadow-md"
+                className="w-40 h-40 object-cover border border-gray-300 rounded-full mb-4 shadow-2xl hover:shadow-slate-600"
               />
               <div className="text-center">
                 <p className="text-lg font-medium">{element.name}</p>

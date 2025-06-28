@@ -92,9 +92,9 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="bg-gray-300 shadow-[0_-4px_10px_rgba(0,0,0,0.2)] py-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-          <div className="text-lg font-semibold mb-2 md:mb-0">
+          <Link to="/" className="text-lg font-semibold mb-2 md:mb-0">
             Spectral<span className="text-red-500"> Insights</span>
-          </div>
+          </Link>
           <p className="text-black text-sm mb-2 md:mb-0">
             &copy; {currentYear} Spectral Insights. All rights reserved.
           </p>

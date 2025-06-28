@@ -32,9 +32,9 @@ const Navbar = () => {
     <>
       <nav className="shadow-lg px-4 py-3.5 bg-white">
         <div className="container  mx-auto  flex justify-between items-center">
-          <div className="font-bold text-2xl mr-3">
+          <Link to="/" className="font-bold text-2xl mr-3">
             Spectral<span className="text-red-500"> Insights</span>
-          </div>
+          </Link>
 
           {/* Desktop Navbar */}
           <div className="hidden md:flex md:space-x-3 lg:space-x-6 items-center">
