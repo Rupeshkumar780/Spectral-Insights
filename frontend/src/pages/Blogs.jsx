@@ -7,8 +7,8 @@ const Blogs=() => {
   console.log(blogs);
   return (
     <div>
-      <div className="container min-h-screen mx-auto my-12 p-4">
-        <h1 className="text-2xl  font-bold mb-6">All Blogs goes here!!!</h1>
+      <div className="container min-h-screen mx-auto pt-15 px-4 pb-50">
+        <h1 className="text-2xl font-bold mb-6">All Blogs goes here!!!</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {blogs && blogs.length > 0 ? (
             blogs.map((blog, index) => (

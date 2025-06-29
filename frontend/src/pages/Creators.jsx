@@ -23,7 +23,7 @@ const Creators=() => {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center items-center my-20 bg-gray-100">
+    <div className=" flex flex-wrap justify-center items-center py-20 pb-50 bg-gray-100">
       {creators.map((creator) => (
         <div
           key={creator._id}
