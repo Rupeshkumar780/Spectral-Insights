@@ -1,7 +1,7 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-12">
-      <div className="max-w-4xl mx-auto bg-white p-10 shadow-md rounded-md">
+    <div className="flex min-h-screen justify-center items-center bg-gray-50 px-6 pt-20 pb-50">
+      <div className="max-w-4xl mx-auto bg-white p-10 shadow-md rounded-md shadow-amber-900">
         <h1 className="text-3xl font-bold text-blue-800 mb-6">Privacy Policy</h1>
         <p className="text-gray-700 mb-4">
           At Spectral Insights, we value your privacy. This policy outlines how we collect, use, and protect your

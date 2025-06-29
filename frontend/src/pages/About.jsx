@@ -5,7 +5,7 @@ const About = () => {
   console.log(profile);
 
   return (
-    <div className="container max-w-4xl mx-auto my-12 p-4 space-y-9">
+    <div className="container min-h-screen max-w-4xl mx-auto pt-15 pb-50 px-10 space-y-9">
       <h1 className="text-2xl font-bold mb-6">About</h1>
 
       <p>
