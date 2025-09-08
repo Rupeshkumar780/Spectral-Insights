@@ -99,11 +99,13 @@ const Footer = () => {
             &copy; {currentYear} Spectral Insights. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <a href="https://github.com/Rupeshkumar780" target="_blank" rel="noreferrer">
+            {/* <a href="https://github.com/Rupeshkumar780" target="_blank" rel="noreferrer"> */}
+            <a href="https://github.com/Arya-Prakash822" target="_blank" rel="noreferrer">
               <FaGithub className="h-6 w-6 hover:scale-110" />
             </a>
             <a
-              href="https://www.linkedin.com/in/rupesh-kumar-240437287/"
+              // href="https://www.linkedin.com/in/rupesh-kumar-240437287/"
+              href="https://www.linkedin.com/in/arya-prakash822/"
               target="_blank"
               rel="noreferrer"
             >
