@@ -12,17 +12,17 @@ const About = () => {
         Hey! I’m{" "}
         <strong className="text-blue-800 font-semibold hover:scale-105 duration-500">
           {/* profile?.user?.name ||  */}
-          {/* {"Rupesh Kumar"} */}
-          {"Arya Prakash"}
+           {"Rupesh Kumar"} 
+          {/* {"Arya Prakash"} */}
         </strong>
         , an engineering undergrad, full-stack developer, and someone who believes in the power of building — whether it's products, teams, or better habits.
       </p>
 
       <p>
-        {/* I'm currently a Pre-Final Year Student pursuing Electrical Engineering at{" "} */}
-        I'm currently a Pre-Final Year Student pursuing Electrical and Electronics Engineering (EEE) at{" "}
-        <strong>IIT Patna</strong>. College life here has been a journey filled with challenges, friendships, late-night debugging sessions, and moments of self-discovery. Being surrounded by people who are equally driven and curious constantly pushes me to grow — both technically and personally.
-        {/* <strong>IIT (ISM) Dhanbad</strong>. College life here has been a journey filled with challenges, friendships, late-night debugging sessions, and moments of self-discovery. Being surrounded by people who are equally driven and curious constantly pushes me to grow — both technically and personally. */}
+        I'm currently a Pre-Final Year Student pursuing Electrical Engineering at{" "} 
+        {/* I'm currently a Pre-Final Year Student pursuing Electrical and Electronics Engineering (EEE) at{" "} */}
+        {/* <strong>IIT Patna</strong>. College life here has been a journey filled with challenges, friendships, late-night debugging sessions, and moments of self-discovery. Being surrounded by people who are equally driven and curious constantly pushes me to grow — both technically and personally. */}
+        <strong>IIT (ISM) Dhanbad</strong>. College life here has been a journey filled with challenges, friendships, late-night debugging sessions, and moments of self-discovery. Being surrounded by people who are equally driven and curious constantly pushes me to grow — both technically and personally.
       </p>
 
       <p>
