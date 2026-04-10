@@ -101,13 +101,13 @@ const Contact=() => {
                 </li>
                 <li className="flex items-center space-x-2">
                   <FaEnvelope className="text-pink-500" />
-                  <span>rupesh780123kumar@gmail.com</span>
-                  {/* <span>aryaprakash@gmail.com</span> */}
+                  {/* <span>rupesh780123kumar@gmail.com</span> */}
+                  <span>aryaprakash@gmail.com</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <FaMapMarkerAlt className="text-green-500" />
-                  <span>Dhanbad, India</span>
-                  {/* <span>Patna, India</span> */}
+                  {/* <span>Dhanbad, India</span> */}
+                  <span>Patna, India</span> 
                 </li>
               </ul>
             </div>
