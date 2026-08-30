@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./docs/images/logo.png" alt="Spectral Insights Logo" width="120"/>
+<img src="./frontend/src/assets/logo.png" alt="Spectral Insights Logo" width="120"/>
 
-# ✨ Spectral Insights
+# Spectral Insights
 
 **A full-stack MERN blogging platform with AI-assisted writing, powered by Google Gemini.**
 
