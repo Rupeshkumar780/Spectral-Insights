@@ -101,23 +101,11 @@ const Contact=() => {
                 </li>
                 <li className="flex items-center space-x-2">
                   <FaEnvelope className="text-pink-500" />
-<<<<<<< HEAD
                   <span>rupesh780123kumar@gmail.com</span>
-                  {/* <span>aryaprakash@gmail.com</span> */}
                 </li>
                 <li className="flex items-center space-x-2">
                   <FaMapMarkerAlt className="text-green-500" />
                   <span>Dhanbad, India</span>
-                  {/* <span>Patna, India</span> */}
-=======
-                  {/* <span>rupesh780123kumar@gmail.com</span> */}
-                  <span>aryaprakash@gmail.com</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <FaMapMarkerAlt className="text-green-500" />
-                  {/* <span>Dhanbad, India</span> */}
-                  <span>Patna, India</span> 
->>>>>>> 06fce08ab6a75a7f618d5548d449b84e7195460b
                 </li>
               </ul>
             </div>
@@ -128,8 +116,4 @@ const Contact=() => {
   );
 }
 
-<<<<<<< HEAD
 export default Contact;
-=======
-export default Contact;
->>>>>>> 06fce08ab6a75a7f618d5548d449b84e7195460b
