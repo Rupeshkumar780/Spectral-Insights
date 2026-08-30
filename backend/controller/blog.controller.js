@@ -78,6 +78,12 @@ export const deleteBlog = async (req, res) => {
   if (!blog) {
     return res.status(404).json({ message: "Blog not Found." });
   }
+  
+  // Clean up the associated image before removing the DB record
+  if (blog.blogImage?.public_id) {
+    await cloudinary.uploader.destroy(blog.blogImage.public_id);
+  }
+
   await blog.deleteOne();
   res.status(200).json({ message: "Blog deleted successfully." });
 };

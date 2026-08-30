@@ -75,12 +75,17 @@ export const login = async (req, res) => {
            return res.status(400).json({message: "Please fill required fields" }); 
         } 
         const user = await User.findOne({ email }).select("+password"); 
+        if (!user) {
+            return res.status(400).json({ message: "Invalid email or password" });
+        }
+
+        // Check if user is already registered or not
         if (!user.password) { 
             return res.status(400).json({message: "Please Enter the password." }); 
         } 
         // checking whether the bcrypt password matches with given password
         const isMatch = await bcrypt.compare(password, user.password); 
-        if (!user || !isMatch) { 
+        if (!isMatch) { 
             return res.status(400).json({message: "Invalid email or password" }); 
         } 
         if (user.role !== role) { 

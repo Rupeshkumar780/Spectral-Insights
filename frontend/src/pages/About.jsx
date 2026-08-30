@@ -18,14 +18,12 @@ const About = () => {
       </p>
 
       <p>
-        {/* I'm currently a Pre-Final Year Student pursuing Electrical Engineering at{" "} */}
-        I'm currently a Pre-Final Year Student pursuing Electrical Engineering at{" "}
+        I'm currently a Final Year Student pursuing Electrical Engineering at{" "}
         <strong>IIT (ISM) Dhanbad</strong>. College life here has been a journey filled with challenges, friendships, late-night debugging sessions, and moments of self-discovery. Being surrounded by people who are equally driven and curious constantly pushes me to grow — both technically and personally.
-        {/* <strong>IIT (ISM) Dhanbad</strong>. College life here has been a journey filled with challenges, friendships, late-night debugging sessions, and moments of self-discovery. Being surrounded by people who are equally driven and curious constantly pushes me to grow — both technically and personally. */}
       </p>
 
       <p>
-        As a full-stack developer, I enjoy building efficient and user-friendly web applications. I mainly work with technologies like HTML, CSS, JavaScript, and React.js on the frontend, while using Node.js, Express.js, and Firebase on the backend. For databases, I’ve worked with MongoDB and Firestore, and I also use tools like Git, Cloudinary, and a bit of AutoCAD and Ltspice from my engineering background. My programming foundation is built on C and C++, with JavaScript being my go-to language for most projects.
+        As a full-stack developer, I enjoy building efficient and user-friendly web applications. I mainly work with technologies like HTML, CSS, JavaScript, and React.js on the frontend, while using Node.js, Express.js, and Firebase on the backend. For databases, I’ve worked with MongoDB and Firestore, and I also use tools like Git, Cloudinary. My programming foundation is built on C and C++, with JavaScript being my go-to language for most projects.
       </p>
 
       <p>
